@@ -1,0 +1,2578 @@
+Quick-Cocos2d-x C++ support ready.
+
+------------------------------------------------
+
+LOAD LUA FILE: C:/Users/yzl/Documents/Cocos/maplestory/src/main.lua
+
+------------------------------------------------
+
+[LUA-print] ===========================================================
+
+[LUA-print]               LOAD QUICK FRAMEWORK
+
+[LUA-print] ===========================================================
+
+[LUA-print] [INFO] 
+
+[LUA-print] [INFO] # DEBUG                        = 1
+
+[LUA-print] [INFO] #
+
+[LUA-print] [INFO] # device.platform              = windows
+
+[LUA-print] [INFO] # device.model                 = unknown
+
+[LUA-print] [INFO] # device.language              = cn
+
+[LUA-print] [INFO] # device.writablePath          = C:\Users\yzl\Documents\Cocos\maplestory\
+
+[LUA-print] [INFO] # device.directorySeparator    = \
+
+[LUA-print] [INFO] # device.pathSeparator         = ;
+
+[LUA-print] [INFO] #
+
+[LUA-print] [INFO] # CONFIG_SCREEN_AUTOSCALE      = FIXED_HEIGHT
+
+[LUA-print] [INFO] # CONFIG_SCREEN_WIDTH          = 1000.00
+
+[LUA-print] [INFO] # CONFIG_SCREEN_HEIGHT         = 600.00
+
+[LUA-print] [INFO] # display.widthInPixels        = 800.00
+
+[LUA-print] [INFO] # display.heightInPixels       = 480.00
+
+[LUA-print] [INFO] # display.contentScaleFactor   = 0.80
+
+[LUA-print] [INFO] # display.width                = 1000.00
+
+[LUA-print] [INFO] # display.height               = 600.00
+
+[LUA-print] [INFO] # display.cx                   = 500.00
+
+[LUA-print] [INFO] # display.cy                   = 300.00
+
+[LUA-print] [INFO] # display.left                 = 0.00
+
+[LUA-print] [INFO] # display.right                = 1000.00
+
+[LUA-print] [INFO] # display.top                  = 600.00
+
+[LUA-print] [INFO] # display.bottom               = 0.00
+
+[LUA-print] [INFO] # display.c_left               = -500.00
+
+[LUA-print] [INFO] # display.c_right              = 500.00
+
+[LUA-print] [INFO] # display.c_top                = 300.00
+
+[LUA-print] [INFO] # display.c_bottom             = -300.00
+
+[LUA-print] [INFO] #
+
+suffix = csb
+
+textureSize = 0
+
+classname = Node
+
+size = 7
+
+classname = GameMap
+
+cocos2d: SpriteBatchNode: resizing TextureAtlas capacity from [153] to [205].
+
+cocos2d: SpriteBatchNode: resizing TextureAtlas capacity from [205] to [274].
+
+cocos2d: SpriteBatchNode: resizing TextureAtlas capacity from [274] to [366].
+
+cocos2d: SpriteBatchNode: resizing TextureAtlas capacity from [366] to [489].
+
+size = 0
+
+child = 07562BF0
+
+classname = Sprite
+
+size = 0
+
+child = 07570420
+
+classname = Sprite
+
+size = 0
+
+child = 07580F68
+
+classname = Sprite
+
+size = 0
+
+child = 07581358
+
+classname = Sprite
+
+size = 0
+
+child = 07581748
+
+classname = Sprite
+
+size = 0
+
+child = 07581B38
+
+classname = GameMap
+
+size = 0
+
+child = 07570810
+
+[LUA-print] HeroStand
+
+[LUA-print] HeroWalk
+
+[LUA-print] HeroJump
+
+[LUA-print] HeroJumpDown
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] keys	1
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] keys	0
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] keys	1
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] keys ...	124
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] keys	0
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] keys	1
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] keys ...	124
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] keys	1
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] keys ...	124
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] keys	0
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] keys	1
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] keys ...	127
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] keys	1
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] keys ...	127
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] keys	0
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] keys	1
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] keys	0
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] keys	0
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] 270
+
+[LUA-print] keys ...	nil
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
+[LUA-print] 210
+
