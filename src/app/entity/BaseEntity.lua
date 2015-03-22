@@ -9,7 +9,22 @@ function BaseEntity:create()
 end
 
 function BaseEntity:init()
-	
+	self:addNodeEventListener(cc.NODE_ON_ENTER,function(event)
+	   if event.name == "enter" then
+	       self:onEnter()
+	   elseif event.name == "exit" then
+	       self:onExit()
+	   end
+	end
+	)
+end
+
+function BaseEntity:onEnter()
+	print("BaseEntity enter")
+end
+
+function BaseEntity:onExit()
+	print("BaseEntity exit")
 end
 
 return BaseEntity

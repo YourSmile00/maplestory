@@ -15,6 +15,7 @@ local HeroStand = require("app/entity/hero/HeroState")("HeroStand")
 local HeroWalk = require("app/entity/hero/HeroState")("HeroWalk")
 local HeroJump = require("app/entity/hero/HeroState")("HeroJump")
 local HeroJumpDown = require("app/entity/hero/HeroState")("HeroJumpDown")
+local HeroGlobal = require("app/entity/hero/HeroState")("HeroGlobal")
 
 function Hero:create()
     local hero = Hero.new()
@@ -23,6 +24,7 @@ function Hero:create()
 end
 
 function Hero:init()
+    self.velocity = cc.p(0,0)
     self.direction = 0
     self.speed = .5
     self.direction = 0
@@ -64,12 +66,10 @@ function Hero:initState()
     states[HS_JUMP_DOWN] = HeroJumpDown.new()
     
     self.stateMachine.currentState = states[HS_STAND]
+    self.stateMachine.globalState = HeroGlobal.new()
     self.stateMachine.currentState:onStateEnter(self)
        
-    local update = function (dt)
-        self.stateMachine:update()
-    end
-    self:scheduleUpdateWithPriorityLua(update,1)
+   
 end	
 
 function Hero:initEvent()
@@ -119,11 +119,18 @@ function Hero:initEvent()
     dispatcher:addEventListenerWithSceneGraphPriority(listener,self)
 end
 
+function Hero:onEnter()
+    local update = function (dt)
+        self.stateMachine:update()
+    end
+    self:scheduleUpdateWithPriorityLua(update,1)
+end
+
 function Hero:switchParts(state,maxIdx)
 
     local direction = self.direction
     if self.partIdx >= maxIdx then
-    	self.partIdx = 1
+        self.partIdx = 1
     end
     for _,part in ipairs(self.parts) do
        
@@ -206,6 +213,19 @@ function Hero:handleInputKeys(keys)
             end
         end
 	end
+end
+
+function Hero:collisionDetect()
+	local scene = self:getParent()
+    local targetY = scene:getCollisionTargetY(self)
+    self.targetY = targetY
+    
+    if self:getPositionY()<targetY then
+        self.velocity = cc.p(0,0)
+        if self.stateMachine.currentState.type ~= HS_JUMP then
+            self:setPositionY(targetY)
+        end
+    end
 end
 
 return Hero

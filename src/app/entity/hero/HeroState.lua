@@ -18,6 +18,46 @@ function HeroState:excute(baseEntity)
 
 end 
 
+---------global state ---------
+
+local HeroGlobal = class("HeroGlobal",function ()
+	return HeroState.new()
+end)
+
+function HeroGlobal:onStateEnter(baseEntity)
+	
+end
+
+function HeroGlobal:onStateExit(baseEntity)
+	
+end
+
+function HeroGlobal:execute(baseEntity)
+    local delta = cc.Director:getInstance():getDeltaTime()
+    local maxLX = display.width*3/5
+    local maxRX = display.width*2/5
+    local scene = baseEntity:getParent()
+    if baseEntity.direction==2 and baseEntity:getPositionX() > maxLX and 
+        -scene.scene:getPositionX()+ display.width < scene.map:getContentSize().width then
+        local offsetX = baseEntity:getPositionX()- maxLX
+        scene.scene:setPositionX(scene.scene:getPositionX()-offsetX)
+        baseEntity:setPositionX(maxLX)
+        
+    elseif baseEntity.direction == 1 and baseEntity:getPositionX()< maxRX and
+        scene.scene:getPositionX() <0 then
+        local offsetX = baseEntity:getPositionX()-maxRX
+        scene.scene:setPositionX(scene.scene:getPositionX()-offsetX)
+        baseEntity:setPositionX(maxRX)
+    end
+   -- print("heropos",baseEntity:getPositionX())
+    
+    baseEntity.velocity = cc.pAdd(baseEntity.velocity,cc.p(0,Gravity*delta))
+    print(baseEntity.velocity.y)
+    baseEntity:setPosition(baseEntity:getPositionX()+baseEntity.velocity.x*delta,
+                           baseEntity:getPositionY()+baseEntity.velocity.y*delta)
+    baseEntity:collisionDetect()
+end
+
 ---------stand-start-----------
 
 local HeroStand = class("HeroStand",function()
@@ -94,8 +134,8 @@ function HeroJump:ctor()
 end
 
 function HeroJump:onStateEnter(baseEntity)
-    self.stateTime = 0
-	baseEntity:runAction(cc.JumpBy:create(1,{x=0,y=0},100,1))
+    
+	baseEntity.velocity = cc.p(0,350)
     baseEntity:switchParts(HS_JUMP,1)
 end
 
@@ -104,8 +144,7 @@ function HeroJump:onStateExit(baseEntity)
 end
 
 function HeroJump:execute(baseEntity)
-	self.stateTime = self.stateTime + cc.Director:getInstance():getDeltaTime()
-	if self.stateTime >= .9 then
+	if baseEntity.targetY >= baseEntity:getPositionY() then
 	   local key = baseEntity.keys[1]
 	   print("keys ...",key)
 	   if key == left_key then
@@ -167,5 +206,7 @@ return function (name)
 	   return HeroJump
 	elseif name == "HeroJumpDown" then
 	   return HeroJumpDown
+	elseif name == "HeroGlobal" then
+	   return HeroGlobal
 	end
 end
