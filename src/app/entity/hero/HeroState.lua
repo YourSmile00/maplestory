@@ -33,7 +33,6 @@ function HeroGlobal:onStateExit(baseEntity)
 end
 
 function HeroGlobal:execute(baseEntity)
-    local delta = cc.Director:getInstance():getDeltaTime()
     local maxLX = display.width*3/5
     local maxRX = display.width*2/5
     local scene = baseEntity:getParent()
@@ -51,11 +50,8 @@ function HeroGlobal:execute(baseEntity)
     end
    -- print("heropos",baseEntity:getPositionX())
     
-    baseEntity.velocity = cc.pAdd(baseEntity.velocity,cc.p(0,Gravity*delta))
-    print(baseEntity.velocity.y)
-    baseEntity:setPosition(baseEntity:getPositionX()+baseEntity.velocity.x*delta,
-                           baseEntity:getPositionY()+baseEntity.velocity.y*delta)
-    baseEntity:collisionDetect()
+    
+   -- baseEntity:collisionDetect()
 end
 
 ---------stand-start-----------
@@ -144,9 +140,11 @@ function HeroJump:onStateExit(baseEntity)
 end
 
 function HeroJump:execute(baseEntity)
-	if baseEntity.targetY >= baseEntity:getPositionY() then
+	if baseEntity.targetY >= baseEntity:getPositionY() and 
+	baseEntity.velocity.y<=0 then
+	print("targetY",baseEntity.targetY)
+	print("y",baseEntity:getPositionY())
 	   local key = baseEntity.keys[1]
-	   print("keys ...",key)
 	   if key == left_key then
 	       baseEntity.direction = 1
            baseEntity.stateMachine:changeState(baseEntity.stateMachine.states[HS_WALK])
@@ -154,7 +152,7 @@ function HeroJump:execute(baseEntity)
 	       baseEntity.direction = 2
 	       baseEntity.stateMachine:changeState(baseEntity.stateMachine.states[HS_WALK])
 	   else
-		baseEntity.stateMachine:changeState(baseEntity.stateMachine.states[HS_STAND])
+		   baseEntity.stateMachine:changeState(baseEntity.stateMachine.states[HS_STAND])
 	   end
 	end
     local x = 0
@@ -185,7 +183,7 @@ function HeroJumpDown:onStateEnter(baseEntity)
 end
 
 function HeroJumpDown:execute(baseEntity)
-	if math.abs(baseEntity.targetY - baseEntity:getPositionY())<.1 then
+	if baseEntity.targetY >= baseEntity:getPositionY() then
 		baseEntity:setPositionY(baseEntity.targetY)
 		baseEntity.stateMachine:changeState(baseEntity.stateMachine.states[HS_STAND])
 	end

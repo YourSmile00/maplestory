@@ -86,7 +86,7 @@ function Hero:initEvent()
 	       	break
 	       end
 	    end
-	    print("keys",#self.keys)
+	    --print("keys",#self.keys)
 	    local curKey = self.keys[1]
 	    local curStateType = self.stateMachine.currentState.type
 	    if curKey ~= null then
@@ -147,7 +147,7 @@ function Hero:switchParts(state,maxIdx)
         end
         if part.curSprite == nil then
 
-            print("index",part.curIdx,maxIdx)
+            --print("index",part.curIdx,maxIdx)
            end
            part.curSprite:setPosition(pos)
           
@@ -180,16 +180,17 @@ function Hero:forceSwithParts(state)
 end
 
 function Hero:handleInputKeys(keys)
+    
 	if #keys ==1 then
 	   local keyCode = keys[1]
 	   if keyCode == left_key then
-          self.direction = 1
-          if self.stateMachine.currentState.type == HS_STAND then
-              self.stateMachine:changeState(self.stateMachine.states[HS_WALK])
-          end
+            self.direction = 1
+            if self.stateMachine.currentState.type == HS_STAND then
+                self.stateMachine:changeState(self.stateMachine.states[HS_WALK])
+            end
         elseif keyCode == right_key then
-          self.direction = 2
-          if self.stateMachine.currentState.type == HS_STAND then
+            self.direction = 2
+            if self.stateMachine.currentState.type == HS_STAND then
               self.stateMachine:changeState(self.stateMachine.states[HS_WALK])
           end
         elseif keyCode == jump_key then
@@ -198,6 +199,7 @@ function Hero:handleInputKeys(keys)
     elseif #keys == 2 then
         local key1,key2 = keys[2],keys[1]
         if key1 == left_key  and key2 == jump_key then
+            print("left jump")
             self.direction = 1
             self.stateMachine:changeState(self.stateMachine.states[HS_JUMP])
         elseif key1 == right_key  and key2 == jump_key then
@@ -216,16 +218,34 @@ function Hero:handleInputKeys(keys)
 end
 
 function Hero:collisionDetect()
+    local delta = cc.Director:getInstance():getDeltaTime()
 	local scene = self:getParent()
     local targetY = scene:getCollisionTargetY(self)
     self.targetY = targetY
-    
-    if self:getPositionY()<targetY then
-        self.velocity = cc.p(0,0)
-        if self.stateMachine.currentState.type ~= HS_JUMP then
-            self:setPositionY(targetY)
-        end
+   
+   self.velocity = cc.pAdd(self.velocity,cc.p(0,Gravity*delta))
+    --print(baseEntity.velocity.y)
+    local posTemp = cc.p(self:getPositionX()+self.velocity.x*delta,
+                           self:getPositionY()+self.velocity.y*delta)
+    if self.stateMachine.currentState.type == HS_JUMP then
+        print("targetY..",targetY)
     end
+    if posTemp.y<targetY then
+        
+        if self.stateMachine.currentState.type ~= HS_JUMP then
+            self:setPosition(posTemp.x,targetY)
+            self.velocity = cc.p(0,0)
+        else
+            if self.velocity.y <= 0 then
+                self:setPosition(posTemp.x,targetY)
+            else
+                self:setPosition(posTemp)
+            end
+        end
+    else
+       self:setPosition(posTemp) 
+    end
+    --print("posy",self:getPositionY())
 end
 
 return Hero

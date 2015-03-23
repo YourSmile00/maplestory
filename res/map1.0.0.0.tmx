@@ -4,23 +4,29 @@
   <image source="tiled1.png" width="512" height="349"/>
   <tile id="0">
    <properties>
-    <property name="c" value="0"/>
     <property name="collision" value="1"/>
-    <property name="k" value="0"/>
+    <property name="leftpx" value="0"/>
+    <property name="leftpy" value="0"/>
+    <property name="rightpx" value="0"/>
+    <property name="rightpy" value="0"/>
    </properties>
   </tile>
   <tile id="1">
    <properties>
-    <property name="c" value="0"/>
     <property name="collision" value="1"/>
-    <property name="k" value="0"/>
+    <property name="leftpx" value="0"/>
+    <property name="leftpy" value="0"/>
+    <property name="rightpx" value="0"/>
+    <property name="rightpy" value="0"/>
    </properties>
   </tile>
   <tile id="2">
    <properties>
-    <property name="c" value="0"/>
     <property name="collision" value="1"/>
-    <property name="k" value="0"/>
+    <property name="leftpx" value="0"/>
+    <property name="leftpy" value="0"/>
+    <property name="rightpx" value="0"/>
+    <property name="rightpy" value="0"/>
    </properties>
   </tile>
   <tile id="3">
@@ -79,16 +85,22 @@
    eJzt0LsKwkAQRuHReC1U8K6FCt61UNskhfr+D+WpJS4LZskW/4EPpphid8yUUkoppZRSsddDHwPUUEeCBppooV3Z68xWWGODIUYYY4IpZpib++0ddAPt3HDHA2dccC2YXW9fYBlo54kX3kiRIS+Yt9hhjwOOOH39w2cn1FxWrhv8M5eV7hemWO73q9jv51OV9/PJdb8PNuMliA==
   </data>
  </layer>
- <layer name="layer2" width="40" height="30" opacity="0.9">
+ <layer name="layer2" width="40" height="30">
   <data encoding="base64" compression="zlib">
    eJzt0rcKwzAARVGn9wzpdUqvU3r9/7/KHeXBRiALZ3gPDmjQIC4KAk3TNE3TNE3T/n0NNNN+hJb6MsgihzwKKKKEMiqWd6qooZ7w+1poo4MueuhjgCFGlnfGmGCa8PtmmGOBJVZYY4MtdpZ39jjgGIR7u3Y94YwLrrjhjgeeeFneeeODbxDu7drVbODjHNXV/Mdxjc0GPs5RXc1/HNfYdz/Xxr77uTb+AZyXJXY=
   </data>
  </layer>
  <objectgroup name="terrain">
   <object x="0" y="630">
+   <properties>
+    <property name="roadlevel" value="1"/>
+   </properties>
    <polyline points="0,0 900,0 990,-60 1200,-60"/>
   </object>
   <object x="0" y="690">
+   <properties>
+    <property name="roadlevel" value="2"/>
+   </properties>
    <polyline points="0,0 540,0 630,60 720,60 810,120 990,120 1080,180 1200,180"/>
   </object>
  </objectgroup>

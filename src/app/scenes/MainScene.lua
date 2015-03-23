@@ -15,15 +15,31 @@ function MainScene:ctor()
     -- print(display.contentScaleFactor)          
     self.map = scene:getChildByName("Map_1")
     
-    
+    --获取路线--分级
     self.terrains = {}
-    for i,v in ipairs(self.map:getObjectGroup("terrain"):getObjects()) do
-    	   local terrain = {}
-    	   for _,v2 in ipairs(v.polylinePoints) do
-    	       table.insert(terrain,{x=v.x+v2.x,y=-v2.y+v.y})
-    	   end
-    	   table.insert(self.terrains,terrain)
+    local terrain = {}
+    local roadlevel = 1
+    for _,v in ipairs(self.map:getObjectGroup("terrain"):getObjects()) do
+           if tonumber(v.roadlevel) == roadlevel then
+    	       local road = {}
+    	       for _,v2 in ipairs(v.polylinePoints) do
+    	           table.insert(road,{x=v.x+v2.x,y=-v2.y+v.y})
+    	       end
+    	   table.insert(terrain,road)
+    	   else 
+    	       table.insert(self.terrains,terrain)
+    	       roadlevel = roadlevel + 1
+    	       terrain = {}
+    	       if tonumber(v.roadlevel) == roadlevel then
+               local road = {}
+               for _,v2 in ipairs(v.polylinePoints) do
+                   table.insert(road,{x=v.x+v2.x,y=-v2.y+v.y})
+               end
+               table.insert(terrain,road)
+               end
+    	  end
     end
+    table.insert(self.terrains,terrain)
 end
 
 function MainScene:onEnter()
@@ -32,7 +48,7 @@ end
 function MainScene:onExit()
 end
 
-function MainScene:getCollisionTargetY(entity)
+function MainScene:getCollisionTargetY(entity,roadlevel)
 	
 	--for idx,v in ipairs(self.terrains) do
 	local x,y = entity:getPosition()
@@ -54,7 +70,7 @@ function MainScene:getCollisionTargetY(entity)
 	                   self:_getTargetY(x+offsetX,v[i-1],v[i])
 	           -- print(targetY)
 	                   entity.roadLevel = i
-	                   print(targetY)
+	                   --print("roadlevel",i)
 	       	           return targetY
 	               end
 	           end
@@ -68,6 +84,7 @@ function MainScene:getCollisionTargetY(entity)
                 local targetY = 
                     self:_getTargetY(x+offsetX,v[i-1],v[i])
                 --print(targetY)
+                --print("roadlevel",roadLevel)
                 return targetY
             end
         end
