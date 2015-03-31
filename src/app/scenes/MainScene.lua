@@ -3,6 +3,12 @@ local MainScene = class("MainScene", function()
     return display.newScene("MainScene")
 end)
 
+function cc.pFromString(str)
+	local comma = string.find(str,",")
+	return cc.p(tonumber(string.sub(str,1,comma-1)),
+	            tonumber(string.sub(str,comma+1,-1)))
+end
+
 function MainScene:ctor()
     local scene = cc.CSLoader:createNode("map1.0.0.0.csb")
                 :addTo(self)
@@ -46,6 +52,30 @@ function MainScene:onEnter()
 end
 
 function MainScene:onExit()
+end
+
+-- make use of tile propery to get collisionY 
+
+function MainScene:getRoadY(entity)
+    local x,y = entity:getPosition()
+    local rx,ry = x-self.scene:getPositionX(),y-self.scene:getPositionY()
+    local tiledx = math.floor(rx/30)
+    local tempy = math.floor(ry/30)
+    local tiledy = self.map:getMapSize().height-1-tempy
+    entity.tiledCoor = cc.p(tiledx,tiledy)
+    local gid = self.map:getLayer("collision"):getTileGIDAt(cc.p(tiledx,tiledy))
+    entity.tileGID = gid
+    if gid == 0 then
+        return 0
+    end
+    local dic = self.map:getPropertiesForGID(gid) 
+    local leftp = cc.pFromString(dic.leftp)
+    local rightp = cc.pFromString(dic.rightp)
+    --print(rightp.x,rightp.y)
+    local rTargetY = self:_getTargetY(rx-tiledx*30,leftp,rightp)
+    --print(rTargetY)
+    if rTargetY < 0 then return 0 end
+    return rTargetY + tempy * 30
 end
 
 function MainScene:getCollisionTargetY(entity,roadlevel)
@@ -92,8 +122,26 @@ function MainScene:getCollisionTargetY(entity,roadlevel)
 end
 
 function MainScene:_getTargetY(x,pos1,pos2)
-    
+    if pos1.y == pos2.y then
+        if x>=pos1.x and x <= pos2.x then
+            return pos1.y
+        else
+            return -1
+        end 
+    end
 	return (x-pos2.x)/(pos1.x-pos2.x)*(pos1.y-pos2.y)+pos2.y
+end
+
+function MainScene:canJumpDownAtTile(gid)
+	if gid == 0 then
+		return false
+	end
+	local dic = self.map:getPropertiesForGID(gid)
+	if dic.candown == "0" then
+		return false
+    else
+        return true
+	end
 end
 
 return MainScene

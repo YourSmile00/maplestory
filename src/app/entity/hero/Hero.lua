@@ -10,7 +10,8 @@ local Hero = class("Hero",function()
 end
 )
 local YZLStateMachine = require("app/FSM/YZLStateMachine")
-local HeroPart = require("app/entity/hero/HeroPart")
+local HeroPManager = require("app/entity/hero/HeroPManager")
+
 local HeroStand = require("app/entity/hero/HeroState")("HeroStand")
 local HeroWalk = require("app/entity/hero/HeroState")("HeroWalk")
 local HeroJump = require("app/entity/hero/HeroState")("HeroJump")
@@ -27,11 +28,12 @@ function Hero:init()
     self.velocity = cc.p(0,0)
     self.direction = 0
     self.speed = .5
-    self.direction = 0
+   
     self.isMoving = false
-    self.partIdx = 1
-    self.roadLevel = 1
+    
+    
     self.targetY = -1
+    self.keys = {}
     
     self:initParts()
     self:initState()
@@ -39,21 +41,8 @@ function Hero:init()
 end
 
 function Hero:initParts()
-    self.keys = {}
-    self.parts = {}
-    self.head = HeroPart:create(HP_HEAD)
-                :addTo(self,3)
-    self.face = HeroPart:create(HP_FACE)
-                :addTo(self,4)
-
-    self.body = HeroPart:create(HP_BODY)
-                :addTo(self,1)
-    self.arm  = HeroPart:create(HP_ARM)
-                :addTo(self,2)
-    table.insert(self.parts,self.head)
-    table.insert(self.parts,self.face)
-    table.insert(self.parts,self.body)
-    table.insert(self.parts,self.arm)
+    
+   self.pManager = HeroPManager.new(self)
 end
 
 function Hero:initState()
@@ -76,7 +65,7 @@ function Hero:initEvent()
 	local function onKeyPressed(keyCode,event)
 	    table.insert(self.keys,1,keyCode)
 		self:handleInputKeys(self.keys)
-		self:forceSwithParts(self.stateMachine.currentState.type)
+		self.pManager:forceSwithParts(self.stateMachine.currentState.type)
 		--self.stateMachine.currentState.frameDelta = 5 --make frameDelta max so next frame can change direction
 	end
 	local function onKeyReleased(keyCode,event)
@@ -104,7 +93,7 @@ function Hero:initEvent()
            elseif curKey == jump_key then
             self.stateMachine:changeState(self.stateMachine.states[HS_JUMP])
            end
-        self:forceSwithParts(curStateType)
+        self.pManager:forceSwithParts(curStateType)
 		else
 		  if keyCode == left_key or keyCode == right_key then
             self.stateMachine:changeState(self.stateMachine.states[HS_STAND])
@@ -126,58 +115,7 @@ function Hero:onEnter()
     self:scheduleUpdateWithPriorityLua(update,1)
 end
 
-function Hero:switchParts(state,maxIdx)
 
-    local direction = self.direction
-    if self.partIdx >= maxIdx then
-        self.partIdx = 1
-    end
-    for _,part in ipairs(self.parts) do
-       
-        local index = part.states[state].indexes[self.partIdx] --显示的sprite的索引
-           part.curSprite:setVisible(false)
-           part.curSprite = part.sprites[index]
-           
-        local pos = part.states[state].positions[self.partIdx]
-        if direction == 1 then
-             part.curSprite:setFlippedX(false)
-        elseif direction == 2 then
-            part.curSprite:setFlippedX(true)
-            pos = {x=-pos.x,y=pos.y}
-        end
-        if part.curSprite == nil then
-
-            --print("index",part.curIdx,maxIdx)
-           end
-           part.curSprite:setPosition(pos)
-          
-           part.curSprite:setVisible(true)
-           
-           
-        end
-        self.partIdx = self.partIdx +1
-end
-
-function Hero:forceSwithParts(state)
-    local direction = self.direction
-    if state == HS_JUMP_DOWN then 
-        state = HS_JUMP
-    end
-    for _,part in ipairs(self.parts) do
-        local index = part.states[state].indexes[1] --显示的sprite的索引
-        part.curSprite:setVisible(false)
-        part.curSprite = part.sprites[index]
-        local pos = part.states[state].positions[1]
-        if direction == 1 then
-            part.curSprite:setFlippedX(false)
-        elseif direction == 2 then
-            part.curSprite:setFlippedX(true)
-            pos = {x=-pos.x,y=pos.y}
-        end
-        part.curSprite:setPosition(pos)
-        part.curSprite:setVisible(true)
-    end
-end
 
 function Hero:handleInputKeys(keys)
     
@@ -209,10 +147,13 @@ function Hero:handleInputKeys(keys)
                (key2 == left_key or key2 == right_key) then
             self:handleInputKeys({key2})
         elseif key1 == down_key and key2 == jump_key then
-            if self.roadLevel < #self:getParent().terrains then 
-                self.roadLevel = self.roadLevel + 1
+            local scene = self:getParent()
+            if self.stateMachine.currentState.type == HS_STAND then
+                local isdown = scene:canJumpDownAtTile(self.tileGID)
+                print(isdown)
+                if isdown then
                 self.stateMachine:changeState(self.stateMachine.states[HS_JUMP_DOWN])
-            end
+            end end
         end
 	end
 end
@@ -220,30 +161,36 @@ end
 function Hero:collisionDetect()
     local delta = cc.Director:getInstance():getDeltaTime()
 	local scene = self:getParent()
-    local targetY = scene:getCollisionTargetY(self)
-    self.targetY = targetY
+	local targetY = 0
+	if self.isIgnoreTargetY == false then
+     targetY = scene:getRoadY(self)
+    end
+   local velocity = cc.p(0,0)
+   velocity = cc.pAdd(self.velocity,cc.p(0,Gravity*delta))
+   if self:getPositionY() == targetY then
+   velocity = cc.pAdd(velocity,cc.p(0,-Gravity*delta))
+   end 
+   self.velocity = velocity
    
-   self.velocity = cc.pAdd(self.velocity,cc.p(0,Gravity*delta))
-    --print(baseEntity.velocity.y)
     local posTemp = cc.p(self:getPositionX()+self.velocity.x*delta,
                            self:getPositionY()+self.velocity.y*delta)
-    if self.stateMachine.currentState.type == HS_JUMP then
-        print("targetY..",targetY)
-    end
+    
+    print(self:getPositionY())
+    print(targetY)
     if posTemp.y<targetY then
-        
-        if self.stateMachine.currentState.type ~= HS_JUMP then
-            self:setPosition(posTemp.x,targetY)
+        if 
+             velocity.y<=0  then
             self.velocity = cc.p(0,0)
-        else
-            if self.velocity.y <= 0 then
-                self:setPosition(posTemp.x,targetY)
-            else
-                self:setPosition(posTemp)
-            end
+           
+            posTemp.y = targetY
+            --print(targetY)
         end
     else
-       self:setPosition(posTemp) 
+    end
+    self:setPosition(posTemp)
+    if self.targetY ~= targetY then
+        
+        self.targetY = targetY
     end
     --print("posy",self:getPositionY())
 end

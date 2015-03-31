@@ -4,82 +4,53 @@
   <image source="tiled1.png" width="512" height="349"/>
   <tile id="0">
    <properties>
-    <property name="collision" value="1"/>
-    <property name="leftpx" value="0"/>
-    <property name="leftpy" value="0"/>
-    <property name="rightpx" value="0"/>
-    <property name="rightpy" value="0"/>
+    <property name="candown" value="1"/>
+    <property name="leftp" value="0,0"/>
+    <property name="rightp" value="30,0"/>
    </properties>
   </tile>
   <tile id="1">
    <properties>
-    <property name="collision" value="1"/>
-    <property name="leftpx" value="0"/>
-    <property name="leftpy" value="0"/>
-    <property name="rightpx" value="0"/>
-    <property name="rightpy" value="0"/>
+    <property name="candown" value="0"/>
+    <property name="leftp" value="0,0"/>
+    <property name="rightp" value="30,0"/>
    </properties>
   </tile>
-  <tile id="2">
+  <tile id="30">
    <properties>
-    <property name="collision" value="1"/>
-    <property name="leftpx" value="0"/>
-    <property name="leftpy" value="0"/>
-    <property name="rightpx" value="0"/>
-    <property name="rightpy" value="0"/>
+    <property name="candown" value="1"/>
+    <property name="leftp" value="15,0"/>
+    <property name="rightp" value="30,10"/>
    </properties>
   </tile>
-  <tile id="3">
+  <tile id="31">
    <properties>
-    <property name="c" value="0"/>
-    <property name="collision" value="1"/>
-    <property name="k" value="0"/>
-   </properties>
-  </tile>
-  <tile id="4">
-   <properties>
-    <property name="c" value="0"/>
-    <property name="collision" value="1"/>
-    <property name="k" value="0"/>
-   </properties>
-  </tile>
-  <tile id="5">
-   <properties>
-    <property name="c" value="0"/>
-    <property name="collision" value="1"/>
-    <property name="k" value="0"/>
-   </properties>
-  </tile>
-  <tile id="6">
-   <properties>
-    <property name="c" value="0"/>
-    <property name="collision" value="1"/>
-    <property name="k" value="0"/>
-   </properties>
-  </tile>
-  <tile id="7">
-   <properties>
-    <property name="c" value="0"/>
-    <property name="collision" value="1"/>
-    <property name="k" value="0"/>
-   </properties>
-  </tile>
-  <tile id="8">
-   <properties>
-    <property name="c" value="0"/>
-    <property name="collision" value="1"/>
-    <property name="k" value="0"/>
+    <property name="candown" value="1"/>
+    <property name="leftp" value="0,10"/>
+    <property name="rightp" value="30,31"/>
    </properties>
   </tile>
   <tile id="46">
    <properties>
-    <property name="c" value="2"/>
-    <property name="collision" value="1"/>
-    <property name="k" value=".8"/>
+    <property name="candown" value="1"/>
+    <property name="leftp" value="0,0"/>
+    <property name="rightp" value="30,20"/>
    </properties>
    <objectgroup draworder="index"/>
   </tile>
+  <tile id="47">
+   <properties>
+    <property name="candown" value="1"/>
+    <property name="leftp" value="0,20"/>
+    <property name="rightp" value="15,30"/>
+   </properties>
+  </tile>
  </tileset>
+ <layer name="collision" width="40" height="30" opacity="0.65">
+  <data encoding="base64" compression="zlib">
+   eJzt0rENACAIBVF0Ed1A959OJsCGH0JyL7mOQglmAAAAADoZQZWWtz8z0duVHe9mfLLYTAp52KsGt6vXbbcPkFMBAg==
+  </data>
+ </layer>
  <layer name="layer1" width="40" height="30">
   <data encoding="base64" compression="zlib">
    eJzt0LsKwkAQRuHReC1U8K6FCt61UNskhfr+D+WpJS4LZskW/4EPpphid8yUUkoppZRSsddDHwPUUEeCBppooV3Z68xWWGODIUYYY4IpZpib++0ddAPt3HDHA2dccC2YXW9fYBlo54kX3kiRIS+Yt9hhjwOOOH39w2cn1FxWrhv8M5eV7hemWO73q9jv51OV9/PJdb8PNuMliA==

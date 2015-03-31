@@ -90,77 +90,173 @@ cocos2d: SpriteBatchNode: resizing TextureAtlas capacity from [366] to [489].
 
 size = 0
 
-child = 080546F8
+child = 076C8910
 
 classname = Sprite
 
 size = 0
 
-child = 08055D48
+child = 076D9EC0
 
 classname = Sprite
 
 size = 0
 
-child = 08056830
+child = 076D93D8
 
 classname = Sprite
 
 size = 0
 
-child = 08056C20
+child = 076FADA0
 
 classname = Sprite
 
 size = 0
 
-child = 0806FF20
+child = 076FD190
 
 classname = Sprite
 
 size = 0
 
-child = 08070310
+child = 076FD580
 
 classname = GameMap
 
 size = 0
 
-child = 08057010
+child = 076DBB68
 
-[LUA-print] HeroStand
+[LUA-print] true
 
-[LUA-print] HeroWalk
+[LUA-print] true
 
-[LUA-print] HeroJump
+[LUA-print] left jump
 
-[LUA-print] HeroJumpDown
+[LUA-print] left jump
 
-[LUA-print] HeroGlobal
+[LUA-print] left jump
 
-[LUA-print] 0	270
+[LUA-print] left jump
 
-[LUA-print] 900	270
+[LUA-print] left jump
 
-[LUA-print] 990	330
+[LUA-print] left jump
 
-[LUA-print] 1200	330
+[LUA-print] true
 
-[LUA-print] 0	210
+[LUA-print] left jump
 
-[LUA-print] 540	210
+[LUA-print] true
 
-[LUA-print] 630	150
+[LUA-print] left jump
 
-[LUA-print] 720	150
+[LUA-print] left jump
 
-[LUA-print] 810	90
+[LUA-print] true
 
-[LUA-print] 990	90
+[LUA-print] true
 
-[LUA-print] 1080	30
+[LUA-print] true
 
-[LUA-print] 1200	30
+[LUA-print] left jump
+
+[LUA-print] left jump
+
+[LUA-print] left jump
+
+[LUA-print] true
+
+[LUA-print] left jump
+
+[LUA-print] left jump
+
+[LUA-print] true
+
+[LUA-print] left jump
+
+[LUA-print] left jump
+
+[LUA-print] left jump
+
+[LUA-print] true
+
+[LUA-print] left jump
+
+[LUA-print] true
+
+[LUA-print] left jump
+
+[LUA-print] left jump
+
+[LUA-print] left jump
+
+[LUA-print] true
+
+[LUA-print] true
+
+[LUA-print] left jump
+
+[LUA-print] left jump
+
+[LUA-print] left jump
+
+[LUA-print] true
+
+[LUA-print] true
+
+[LUA-print] left jump
+
+[LUA-print] true
+
+[LUA-print] true
+
+[LUA-print] true
+
+[LUA-print] true
+
+[LUA-print] left jump
+
+[LUA-print] left jump
+
+[LUA-print] true
+
+[LUA-print] true
+
+[LUA-print] left jump
+
+[LUA-print] left jump
+
+[LUA-print] true
+
+[LUA-print] left jump
+
+[LUA-print] left jump
+
+[LUA-print] true
+
+[LUA-print] true
+
+[LUA-print] left jump
+
+[LUA-print] left jump
+
+[LUA-print] true
+
+[LUA-print] left jump
+
+[LUA-print] left jump
+
+[LUA-print] left jump
+
+[LUA-print] true
+
+[LUA-print] left jump
+
+[LUA-print] left jump
+
+[LUA-print] true
 
 [LUA-print] BaseEntity exit
 

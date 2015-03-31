@@ -23,7 +23,7 @@ HPDATA = {
     },
     {--face
         files={
-            "default.face.png"
+            "hero/default.face.png"
         },
         states = {
             {--stand
