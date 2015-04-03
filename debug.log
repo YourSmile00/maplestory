@@ -90,173 +90,41 @@ cocos2d: SpriteBatchNode: resizing TextureAtlas capacity from [366] to [489].
 
 size = 0
 
-child = 076C8910
+child = 0758E3D0
 
 classname = Sprite
 
 size = 0
 
-child = 076D9EC0
+child = 075BBD88
 
 classname = Sprite
 
 size = 0
 
-child = 076D93D8
+child = 075AEFE0
 
 classname = Sprite
 
 size = 0
 
-child = 076FADA0
+child = 075B2800
 
 classname = Sprite
 
 size = 0
 
-child = 076FD190
+child = 075B2BF0
 
 classname = Sprite
 
 size = 0
 
-child = 076FD580
+child = 075B2FE0
 
 classname = GameMap
 
 size = 0
 
-child = 076DBB68
-
-[LUA-print] true
-
-[LUA-print] true
-
-[LUA-print] left jump
-
-[LUA-print] left jump
-
-[LUA-print] left jump
-
-[LUA-print] left jump
-
-[LUA-print] left jump
-
-[LUA-print] left jump
-
-[LUA-print] true
-
-[LUA-print] left jump
-
-[LUA-print] true
-
-[LUA-print] left jump
-
-[LUA-print] left jump
-
-[LUA-print] true
-
-[LUA-print] true
-
-[LUA-print] true
-
-[LUA-print] left jump
-
-[LUA-print] left jump
-
-[LUA-print] left jump
-
-[LUA-print] true
-
-[LUA-print] left jump
-
-[LUA-print] left jump
-
-[LUA-print] true
-
-[LUA-print] left jump
-
-[LUA-print] left jump
-
-[LUA-print] left jump
-
-[LUA-print] true
-
-[LUA-print] left jump
-
-[LUA-print] true
-
-[LUA-print] left jump
-
-[LUA-print] left jump
-
-[LUA-print] left jump
-
-[LUA-print] true
-
-[LUA-print] true
-
-[LUA-print] left jump
-
-[LUA-print] left jump
-
-[LUA-print] left jump
-
-[LUA-print] true
-
-[LUA-print] true
-
-[LUA-print] left jump
-
-[LUA-print] true
-
-[LUA-print] true
-
-[LUA-print] true
-
-[LUA-print] true
-
-[LUA-print] left jump
-
-[LUA-print] left jump
-
-[LUA-print] true
-
-[LUA-print] true
-
-[LUA-print] left jump
-
-[LUA-print] left jump
-
-[LUA-print] true
-
-[LUA-print] left jump
-
-[LUA-print] left jump
-
-[LUA-print] true
-
-[LUA-print] true
-
-[LUA-print] left jump
-
-[LUA-print] left jump
-
-[LUA-print] true
-
-[LUA-print] left jump
-
-[LUA-print] left jump
-
-[LUA-print] left jump
-
-[LUA-print] true
-
-[LUA-print] left jump
-
-[LUA-print] left jump
-
-[LUA-print] true
-
-[LUA-print] BaseEntity exit
+child = 075AF3D0
 

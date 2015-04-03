@@ -1,3 +1,4 @@
+require("lsqlite3")
 
 local MainScene = class("MainScene", function()
     return display.newScene("MainScene")
@@ -14,7 +15,7 @@ function MainScene:ctor()
                 :addTo(self)
                 :pos(0,0)
     self.scene = scene
-    local hero = require("app/entity/hero/Hero"):create()
+    --[[local hero = require("app/entity/hero/Hero"):create()
                 :addTo(self)
                 :pos(display.cx,display.cy)
     self.hero = hero
@@ -45,7 +46,8 @@ function MainScene:ctor()
                end
     	  end
     end
-    table.insert(self.terrains,terrain)
+    table.insert(self.terrains,terrain)]]
+    
 end
 
 function MainScene:onEnter()
